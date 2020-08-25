@@ -1,0 +1,9 @@
+Package: targeted-selection
+Type: Package
+Title: Targeted selection: parameter-specific model selection 
+Version: 0.1
+Date: 2020-08-24
+Author: Dominik Rothenhaeusler 
+Maintainer: Dominik Rothenhaeusler <rdominik@stanford.edu>
+Description: This package provides a function for selecting among a set of estimators, if the goal is to minimize the mean-squared error with respect to a one-dimensional parameter of interest.
+License: GPL (>= 3) 
