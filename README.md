@@ -5,7 +5,7 @@ This package provides a function for selecting among a set of estimators, if the
 ## How to install
 
 1. The [devtools](https://github.com/hadley/devtools) package has to be installed. You can install it using  `install.packages("devtools")`.
-2. The latest development version can then be installied using `devtools::install_github("rothenhaeusler/targeted-selection")`
+2. The latest development version can then be installied using `devtools::install_github("rothenhaeusler/tms")`
 
 ## Usage
 
