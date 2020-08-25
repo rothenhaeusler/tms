@@ -1,6 +1,6 @@
-Package: targeted-selection
+Package: tms 
 Type: Package
-Title: Targeted selection: parameter-specific model selection 
+Title: Targeted model selection
 Version: 0.1
 Date: 2020-08-24
 Author: Dominik Rothenhaeusler 
