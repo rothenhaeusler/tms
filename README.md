@@ -19,5 +19,6 @@ df <-  as.data.frame(cbind(Tr,X,Y))
 surrogate_estimator <- function(df) coef(lm(Y~X,data=dff))[2]*coef(lm(X~Tr,data=dff))[2] 
 difference_in_means <- function(df) coef(lm(Y~Tr,data=dff))[2] 
 
-targeted(list(surrogate_estimator,difference_in_means),df)
+# The first estimator in the list should be an asymptotically unbiased estimator for the parameter of interest; it serves as a benchmark.
+targeted(list(difference_in_means,surrogate_estimator),df)
 ```
