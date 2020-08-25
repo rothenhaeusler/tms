@@ -4,7 +4,7 @@
 #' @param df The data
 #' @param R Number of bootstrap draws
 #' @export
-targeted <- function(f1,f2,df,R=200) {
+tms <- function(f1,f2,df,R=200) {
   bstrap <- function(){
     indices <- sample.int(nrow(df),size=nrow(df),replace = TRUE)
     return(simplify2array(lapply(X=list(f1,f2),FUN = function(f) f(df[indices,]))))
