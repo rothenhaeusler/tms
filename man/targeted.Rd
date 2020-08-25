@@ -2,10 +2,12 @@
 \alias{targeted}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
+Targeted model selection
 %%  ~~function to do ... ~~
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function selects among a set of estimator with the goal of minimizing the mean-squared error with respect to a one-dimensional parameter of interest.
 }
 \usage{
 targeted(f1, f2, df, R = 200)
@@ -13,15 +15,18 @@ targeted(f1, f2, df, R = 200)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{f1}{
+An asymptotically unbiased estimator of the quantity of interest.
 %%     ~~Describe \code{f1} here~~
 }
   \item{f2}{
-%%     ~~Describe \code{f2} here~~
+A potentially biased estimator of the quantity of interest.%%     ~~Describe \code{f2} here~~
 }
   \item{df}{
+A data frame.
 %%     ~~Describe \code{df} here~~
 }
   \item{R}{
+The number of bootstrap draws.
 %%     ~~Describe \code{R} here~~
 }
 }
@@ -29,6 +34,7 @@ targeted(f1, f2, df, R = 200)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
+This function returns a final estimator and a 95 percent bootstrap confidence interval.
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
@@ -39,7 +45,7 @@ targeted(f1, f2, df, R = 200)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Dominik Rothenhaeusler
 }
 \note{
 %%  ~~further notes~~
