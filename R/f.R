@@ -4,14 +4,16 @@
 #' @param df The data
 #' @param R Number of bootstrap draws
 #' @export
-tms <- function(f1,f2,df,R=200) {
+targeted <- function(f1,f2,df,R=200) {
   bstrap <- function(){
     indices <- sample.int(nrow(df),size=nrow(df),replace = TRUE)
     return(simplify2array(lapply(X=list(f1,f2),FUN = function(f) f(df[indices,]))))
   }
   bstrap_reps <- replicate(R,bstrap())
+  f1_df <- f1(df)
+  f2_df <- f2(df)
   criterion <- function(s) {
-    max(( (1-s)*f1 + s*f2  - f1 )^2 - var((1-s)*bstrap_reps[1,]+s*bstrap_reps[2,] - bstrap_reps[1,]),0) + var((1-s)*bstrap_reps[1,]+s*bstrap_reps[2,])
+    max(( (1-s)*f1_df + s*f2_df  - f1_df )^2 - var((1-s)*bstrap_reps[1,]+s*bstrap_reps[2,] - bstrap_reps[1,]),0) + var((1-s)*bstrap_reps[1,]+s*bstrap_reps[2,])
   }
   criterion_vec <- sapply(seq(0,1,length.out=10),criterion)
   criterion_subset <- function() {
@@ -25,7 +27,7 @@ tms <- function(f1,f2,df,R=200) {
   bstraps <- replicate(criterion_subset(),n=R)
   
   whichmin <- which.min(criterion_vec)
-  estimator_targeted <- (1-seq(0,1,length.out=10)[whichmin])*f1 + (seq(0,1,length.out=10)[whichmin])*f2
+  estimator_targeted <- (1-seq(0,1,length.out=10)[whichmin])*f1_df + (seq(0,1,length.out=10)[whichmin])*f2_df
   
   ret_vec <- c(estimator_targeted,quantile(bstraps,.025),quantile(bstraps,.975))
   names(ret_vec) <- c("final estimate", "95% bootstrap CI, lower bound", "95% bootstrap CI, upper bound" )
