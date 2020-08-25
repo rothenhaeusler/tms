@@ -1,4 +1,10 @@
-targeted <- function(f1,f2,df,R=200) {
+#' tms
+#' @param f1 An asymptotically unbiased estimator of the parameter of interest
+#' @param f2 A potentially biased estimator of the parameter of interest
+#' @param df The data
+#' @param R Number of bootstrap draws
+#' @export
+tms <- function(f1,f2,df,R=200) {
   bstrap <- function(){
     indices <- sample.int(nrow(df),size=nrow(df),replace = TRUE)
     return(simplify2array(lapply(X=list(f1,f2),FUN = function(f) f(df[indices,]))))
