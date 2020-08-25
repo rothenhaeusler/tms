@@ -2,7 +2,7 @@
 % Please edit documentation in R/f.R
 \name{tms}
 \alias{tms}
-\title{tms}
+\title{Targeted model selection}
 \usage{
 tms(f1, f2, df, R = 200)
 }
@@ -16,5 +16,5 @@ tms(f1, f2, df, R = 200)
 \item{R}{Number of bootstrap draws}
 }
 \description{
-tms
+Targeted model selection
 }

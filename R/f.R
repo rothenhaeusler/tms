@@ -1,4 +1,4 @@
-#' tms
+#' Targeted model selection
 #' @param f1 An asymptotically unbiased estimator of the parameter of interest
 #' @param f2 A potentially biased estimator of the parameter of interest
 #' @param df The data
