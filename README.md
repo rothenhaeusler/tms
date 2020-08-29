@@ -1,6 +1,6 @@
 # Targeted selection: parameter-specific model selection
 
-Code to reproduce the figures in the manuscript "Model selection for estimation of causal parameters" can be found in simulations.R.
+The code to reproduce the figures in the manuscript "Model selection for estimation of causal parameters" can be found in simulations.R.
 
 ## R-package
 
