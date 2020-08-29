@@ -1,13 +1,17 @@
 # Targeted selection: parameter-specific model selection
 
+Code to reproduce the figures in the manuscript "Model selection for estimation of causal parameters" can be found in simulations.R.
+
+## R-package
+
 This package provides a function for selecting among a set of estimators, if the goal is to minimize the mean-squared error with respect to a one-dimensional parameter of interest.
 
-## How to install
+### How to install
 
 1. The [devtools](https://github.com/hadley/devtools) package has to be installed. You can install it using  `install.packages("devtools")`.
 2. The latest development version can then be installied using `devtools::install_github("rothenhaeusler/tms")`.
 
-## Usage
+### Usage
 
 ```R
 n <- 100
