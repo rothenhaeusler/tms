@@ -4,7 +4,7 @@ The code to reproduce the figures in the manuscript "Model selection for estimat
 
 ## R-package
 
-This package provides a function for selecting among a set of estimators, if the goal is to minimize the mean-squared error with respect to a one-dimensional parameter of interest.
+This package provides a function for selecting among a set of estimators, if the goal is to minimize the mean-squared error with respect to a finite-dimensional parameter of interest.
 
 ### How to install
 
