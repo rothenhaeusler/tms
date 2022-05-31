@@ -323,13 +323,6 @@ wwrapper <- function(s){
   return(ret_vec)
 }
 
-# modified this fct to also spit out cui estimators
-
-wwrapper(0)
-wwrapper(.3)
-wwrapper(.6)
-wwrapper(1)
-
 
 mat <- sapply(seq(0,1,length.out=20),wwrapper)
 mat
@@ -392,8 +385,6 @@ wwrapper <- function(s){
 }
 
 n <- 2000
-wwrapper(0)
-wwrapper(1)
 mat <- sapply(seq(0,2,length.out=16),wwrapper)
 mat
 
@@ -456,9 +447,6 @@ wwrapper <- function(s){
 }
 
 library(parallel)
-wwrapper(1)
-wwrapper(.5)
-wwrapper(0)
 mat <- sapply(seq(0,1.2,length.out=20),wwrapper)
 mat
 
